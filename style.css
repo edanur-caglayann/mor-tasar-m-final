@@ -1,0 +1,103 @@
+/*Font*/
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+/*CSS sıfırlama*/
+div,
+section,
+h1,
+p,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/*Renkleri değişken gibi tanımlama*/
+:root {
+  --Very-dark-blue: hsl(233, 47%, 7%);
+  --Dark-desaturated-blue: hsl(244, 38%, 16%);
+  --Soft-violet: hsl(277, 64%, 61%);
+  --White: hsl(0, 0%, 100%);
+  --Slightly-transparent-white: hsla(0, 0%, 100%, 0.75);
+  --Slightly-transparent-white: hsla(0, 0%, 100%, 0.6);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: auto;
+  background-color: var(--Very-dark-blue);
+  color: var(--White);
+  font-family: "Inter", sans-serif;
+}
+
+.business-card {
+  /*Yan yana gelmesini istediğimiz öğeleri gruplayan bir üst div
+  açılır ve display flex denir.*/
+  display: flex;
+  border-radius: 10px;
+  justify-content: start;
+  background-color: var(--Dark-desaturated-blue);
+  margin: 200px;
+}
+
+.business-card .detail {
+  max-width: 650px;
+  padding: 80px 90px;
+}
+
+.business-card .detail .detail-title {
+  font-size: 38px;
+  letter-spacing: 1px;
+  margin-bottom: 40px;
+}
+.business-card .detail .detail-title span {
+  color: var(--Soft-violet);
+}
+.business-card .detail .detail-description {
+  line-height: 1.8;
+  color: var(--Slightly-transparent-white);
+  max-width: 400px;
+  margin-bottom: 80px;
+}
+
+.business-card .detail .detail-feature-main {
+  display: flex;
+  justify-content: space-between;
+  max-width: 400px;
+}
+
+.business-card
+  .detail
+  .detail-feature-main
+  .detail-feature
+  .detail-feature-title {
+  font-size: 26px;
+  text-transform: uppercase;
+}
+
+.business-card
+  .detail
+  .detail-feature-main
+  .detail-feature
+  .detail-feature-desc {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  padding-top: 5px;
+  color: var(--Slightly-transparent-white);
+}
+
+.business-card .img {
+  background-image: url("images/image-header-desktop.jpg");
+  background-color: var(--Soft-violet);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 650px;
+  height: auto;
+  border-radius: 0 10px 10px 0;
+
+  /*Arkaplan ile resmi karıştırıyor*/
+  background-blend-mode: multiply;
+}
